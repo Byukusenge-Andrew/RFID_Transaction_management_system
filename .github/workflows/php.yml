@@ -23,10 +23,13 @@ jobs:
         extensions: mbstring, sqlite3  # Add any required PHP extensions
 
     - name: Install Composer dependencies
-      run: composer install
+      run: |
+        cd php_program/embedded  # Change to the directory where composer.json is located
+        composer install
 
     - name: Run tests
       run: |
+        cd php_program/embedded  # Change to the directory where tests are located
         # Here you can run your tests, for example:
         # phpunit tests/  # Uncomment this line if you have PHPUnit tests
         echo "No tests defined yet."  # Placeholder for demonstration
