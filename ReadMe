@@ -1,26 +1,13 @@
 
 
-```markdown
-# RFID Transaction Management System
+
+### RFID Transaction Management System
 
 This project is a simple RFID transaction management system built with PHP and SQLite. It allows users to upload transaction data and view all transactions in a web interface.
 
 ## Directory Structure
 
-```
-your-project/
-│
-├── php_program/
-│   ├── embedded/
-│   │   ├── upload.php
-│   │   ├── index.php
-│   │   ├── info.php
-│   │   ├── RFIDManager.php
-│   │   └── DatabaseManager.php
-│   └── Requestmaker.py
-│
-└── README.md
-```
+
 
 ## File Descriptions
 
