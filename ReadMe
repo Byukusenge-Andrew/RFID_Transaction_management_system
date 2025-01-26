@@ -1,12 +1,7 @@
 
-
-
 ### RFID Transaction Management System
 
 This project is a simple RFID transaction management system built with PHP and SQLite. It allows users to upload transaction data and view all transactions in a web interface.
-
-## Directory Structure
-
 
 
 ## File Descriptions
