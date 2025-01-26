@@ -1,0 +1,87 @@
+
+
+```markdown
+# RFID Transaction Management System
+
+This project is a simple RFID transaction management system built with PHP and SQLite. It allows users to upload transaction data and view all transactions in a web interface.
+
+## Directory Structure
+
+```
+your-project/
+│
+├── php_program/
+│   ├── embedded/
+│   │   ├── upload.php
+│   │   ├── index.php
+│   │   ├── info.php
+│   │   ├── RFIDManager.php
+│   │   └── DatabaseManager.php
+│   └── Requestmaker.py
+│
+└── README.md
+```
+
+## File Descriptions
+
+- **upload.php**: This script handles the uploading of RFID transaction data via a POST request. It validates the input data and saves the transaction using the `RFIDManager` class.
+
+- **index.php**: This script displays all RFID transactions in a table format. It fetches transactions from the `RFIDManager` and renders them in an HTML table.
+
+- **info.php**: This script outputs the PHP configuration information. It can be accessed to check the PHP environment settings.
+
+- **RFIDManager.php**: This class manages RFID transactions, including saving and retrieving them from the SQLite database. It initializes the database table if it doesn't exist.
+
+- **DatabaseManager.php**: This class handles the database connection for the application, providing a method to get the SQLite database connection.
+
+- **Requestmaker.py**: This Python script is used to send a POST request to the `upload.php` script with sample transaction data. It can be used for testing the upload functionality.
+
+## Setup Instructions
+
+1. Clone the repository.
+2. Set up a local server (e.g., XAMPP, MAMP) to run the PHP files.
+3. Place the `php_program` directory in the server's document root.
+4. Access the `index.php` file through your web browser to view transactions.
+
+## Usage
+
+### Uploading a Transaction
+
+To upload a transaction, you can use the `Requestmaker.py` script or a cURL command. Here’s how to construct the cURL command:
+
+```
+curl -X POST -d "customer=Jean Baptiste&initial_balance=100000&transport_fare=2000" http://localhost/php_program/embedded/upload.php
+```
+
+- **-X POST**: Specifies that the request method is POST.
+- **-d**: Sends the specified data in the POST request. In this case, it includes:
+  - `customer`: The name of the customer (e.g., "Jean Baptiste").
+  - `initial_balance`: The initial balance of the customer (e.g., 100000).
+  - `transport_fare`: The transport fare to be deducted (e.g., 2000).
+- **http://localhost/php_program/embedded/upload.php**: The URL of the `upload.php` script where the request is sent.
+
+### Viewing Transactions
+
+To view all transactions, simply access the `index.php` file in your web browser:
+
+```
+http://localhost/php_program/embedded/index.php
+```
+
+### Testing with Python Script
+
+You can also run the `Requestmaker.py` script to test the upload functionality. Make sure you have the `requests` library installed in Python:
+
+```
+pip install requests
+```
+
+Then run the script:
+
+```bash
+python Requestmaker.py
+```
+
+## License
+
+This project is licensed under the MIT License.
