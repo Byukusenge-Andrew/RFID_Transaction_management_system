@@ -1,8 +1,6 @@
-
-### RFID Transaction Management System
+# RFID Transaction Management System
 
 This project is a simple RFID transaction management system built with PHP and SQLite. It allows users to upload transaction data and view all transactions in a web interface.
-
 
 ## File Descriptions
 
@@ -31,7 +29,7 @@ This project is a simple RFID transaction management system built with PHP and S
 
 To upload a transaction, you can use the `Requestmaker.py` script or a cURL command. Here’s how to construct the cURL command:
 
-```
+```bash
 curl -X POST -d "customer=Jean Baptiste&initial_balance=100000&transport_fare=2000" http://localhost/php_program/embedded/upload.php
 ```
 
@@ -46,7 +44,7 @@ curl -X POST -d "customer=Jean Baptiste&initial_balance=100000&transport_fare=20
 
 To view all transactions, simply access the `index.php` file in your web browser:
 
-```
+```bash
 http://localhost/php_program/embedded/index.php
 ```
 
@@ -54,7 +52,7 @@ http://localhost/php_program/embedded/index.php
 
 You can also run the `Requestmaker.py` script to test the upload functionality. Make sure you have the `requests` library installed in Python:
 
-```
+```bash
 pip install requests
 ```
 
